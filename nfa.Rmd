@@ -1,6 +1,7 @@
 ---
-title: "Networks from archives: Reconstructing networks of official correspondence in the early modern Portuguese empire"
-date: "2021-07-09"
+title: "Networks from archives"
+subtitle: "Reconstructing networks of official correspondence in the early modern Portuguese empire"
+author: "Michał Bojanowski, Agata Błoch, Demival Vasques Filho"
 output:
   xaringan::moon_reader:
     css: ["default", "css/slides.css", "css/fonts.css"]
@@ -51,12 +52,15 @@ class: center top main-title section-title-4
 .normal[Reconstructing networks of official correspondence in the early modern Portuguese empire]
 
 .class-info[
-Michał Bojanowski (Kozminski University)  
-Agata Błoch (University of Warsaw)  
-Demival Vasques Filho (IEG Mainz)
+<span style="font-decoration: underline;">Michał Bojanowski</span> .small[Kozminski University]  
+Agata Błoch .small[Institute of History, Polish Academy of Sciences]  
+Demival Vasques Filho .small[Leibniz Institute of European History]
 
+![](logo-ku.png)
+![](logo-ih.png)
 ![](logo-ieg.png)
 ]
+
 
 ---
 
