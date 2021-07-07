@@ -45,15 +45,17 @@ BibOptions(
 
 
 
-class: center middle main-title section-title-4
+class: center top main-title section-title-4
 
 # Networks from archives  
-.large[Reconstructing networks of official correspondence in the early modern Portuguese empire]
+.normal[Reconstructing networks of official correspondence in the early modern Portuguese empire]
 
 .class-info[
-Michał Bojanowski (Kozminski University)<br/>
+Michał Bojanowski (Kozminski University)  
 Agata Błoch (University of Warsaw)  
-Demival Vasquez Filho (ISEG Mainz)
+Demival Vasques Filho (IEG Mainz)
+
+![](logo-ieg.png)
 ]
 
 ---

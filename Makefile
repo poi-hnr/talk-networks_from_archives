@@ -8,9 +8,14 @@ default: $(rmd:.Rmd=.html)
 %.html: %.Rmd
 	$(rscript) $(rscript_flags) -e 'rmarkdown::render("$<")'
 
-publish:index.html
+nfa.html: logo-ieg.png
 
 index.html: nfa.html
 	cp $< $@
+
+logo-ieg.png: logo-ieg-src.png
+	convert $< -resize 100x $@
+
+publish:index.html
 
 .PHONY: default publish
