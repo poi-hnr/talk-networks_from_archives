@@ -1,0 +1,57 @@
+/*
+#002257,#004FA3,#4AAAA7,#A8D353,#F7EF00,#002257,#004FA3,#4AAAA7
+*/
+
+
+.main-title {
+  background-color: #004FA3;
+  color: white;
+}
+
+.main-title .class-info {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: calc(0% + 0.5em);
+}
+
+
+.sec-title {
+  color: black;
+}
+
+
+
+
+.huge {
+  font-size: 2.2em;
+}
+
+.large {
+  font-size: 1.7em;
+}
+
+.normal {
+  font-size: 1em;
+}
+
+.medium {
+  font-size: 1.4em;
+}
+
+.SMALL {
+  /* CURSE YOU LATEX */
+  font-size: 0.9em;
+}
+
+.small {
+  font-size: 0.8em;
+}
+
+.tiny {
+  font-size: 0.5em;
+}
+
+.light {
+  font-weight: 300;
+}

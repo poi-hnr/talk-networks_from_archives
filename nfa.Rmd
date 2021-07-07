@@ -1,0 +1,74 @@
+---
+title: "Networks from archives: Reconstructing networks of official correspondence in the early modern Portuguese empire"
+date: "2021-07-09"
+output:
+  xaringan::moon_reader:
+    css: ["default", "css/slides.css", "css/fonts.css"]
+    yolo: false
+    self_contained: true
+    seal: false
+    nature:
+      highlightStyle: github
+editor_options: 
+  chunk_output_type: console
+---
+
+<!--
+vim:spell:spelllang=en_us 
+-->
+
+```{r, setup, include=FALSE, cache=FALSE}
+suppressPackageStartupMessages({
+  library("knitr")
+  library(RefManageR)
+  requireNamespace("xaringanExtra")
+})
+
+xaringanExtra::use_tile_view()
+
+knitr::opts_chunk$set( 
+  echo=FALSE,
+  cache = TRUE,
+  dev = "svg"
+)
+
+BibOptions(
+  check.entries = FALSE,
+  bib.style = "authoryear",
+  cite.style = "authoryear",
+  style = "markdown",
+  hyperlink = FALSE,
+  dashed = FALSE
+)
+# mybib <- ReadBib(here::here("nfa.bib"), check = FALSE)
+```
+
+
+
+class: center middle main-title section-title-4
+
+# Networks from archives  
+.large[Reconstructing networks of official correspondence in the early modern Portuguese empire]
+
+.class-info[
+Michał Bojanowski (Kozminski University)<br/>
+Agata Błoch (University of Warsaw)  
+Demival Vasquez Filho (ISEG Mainz)
+]
+
+---
+
+
+# Introduction
+
+Hi!
+
+
+
+---
+
+# References
+
+```{r references, echo=FALSE, results="asis"}
+# PrintBibliography(mybib)
+```
