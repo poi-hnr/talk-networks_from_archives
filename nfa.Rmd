@@ -52,13 +52,13 @@ class: center top main-title section-title-4
 .normal[Reconstructing networks of official correspondence in the early modern Portuguese empire]
 
 .class-info[
-<span style="font-decoration: underline;">Michał Bojanowski</span> .small[Kozminski University]  
-Agata Błoch .small[Institute of History, Polish Academy of Sciences]  
-Demival Vasques Filho .small[Leibniz Institute of European History]
+Agata Błoch .small[Tadeusz Manteuffel Institute of History, Polish Academy of Sciences]  
+Demival Vasques Filho .small[Leibniz Institute of European History]  
+<span style="text-decoration: underline;">Michał Bojanowski</span> .small[Kozminski University]
 
-![](logo-ku.png)
 ![](logo-ih.png)
 ![](logo-ieg.png)
+![](logo-ku.png)
 ]
 
 
@@ -90,3 +90,31 @@ Hi!
 ```{r references, echo=FALSE, results="asis"}
 # PrintBibliography(mybib)
 ```
+
+
+---
+
+# Thank you!
+
+.pull-left[
+**Read the paper**
+
+.small[Błoch, A., Vasques Filho, D., & Bojanowski, M. (2020). Networks from archives: Reconstructing networks of official correspondence in the early modern Portuguese empire. *Social Networks* in press.]
+
+![paper](paper.png)
+]
+
+.pull-right[
+**Get in touch!**
+
+Find out more about the **Mapping the Atlantic Portuguese Empire** project at https://mape.netlify.app
+
+![Agata](photo-agata.png)
+![Demi](photo-demi.png)
+![Michal](photo-michal.png)
+
+.small[
+These slides are available at  
+[poi-hnr.github.io/talk-networks_from_archives](https://poi-hnr.github.io/talk-networks_from_archives)
+]
+]
