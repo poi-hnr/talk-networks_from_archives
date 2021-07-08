@@ -10,7 +10,7 @@ default: $(rmd:.Rmd=.html)
 %.html: %.Rmd
 	$(rscript) $(rscript_flags) -e 'rmarkdown::render("$<")'
 
-nfa.html: photo-demi.png photo-agata.png photo-michal.png logo-ieg.png logo-ku.png logo-ih.png $(wildcard css/*.css)
+nfa.html: photo-demi.png photo-agata.png photo-michal.png logo-ieg.png logo-ku.png logo-ih.png o1.jpg o2.jpg $(wildcard css/*.css)
 
 index.html: nfa.html
 	cp $< $@

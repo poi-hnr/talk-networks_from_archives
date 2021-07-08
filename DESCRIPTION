@@ -4,3 +4,4 @@ Title: Networks from Archives
 Version: 1.0.0
 Description: Talk for Networks 2021.
 Depends: rmarkdown, magick, xaringan, xaringanExtra, RefManageR, magrittr
+Remotes: mbojan/RefManageR@i75-encoding
