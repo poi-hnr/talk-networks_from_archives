@@ -6,4 +6,4 @@ Presentation of
 
 prepared for Networks 2021 conference.
 
-[Slides are here](index.html)
+[Slides are here](https://poi-hnr.github.io/talk-networks_from_archives)
