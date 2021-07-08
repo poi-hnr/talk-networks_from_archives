@@ -33,6 +33,14 @@ photo-agata.png: photo-agata-src.jpg
 photo-michal.png: photo-michal-src.png
 	$(convert) --resize 100x $< $@
 
-publish:index.html
+o1.jpg: original-letter1.jpg
+	Rscript convert.R --resize x450 $< $@
+
+o2.jpg: original-letter2.jpg
+	Rscript convert.R --resize x450 $< $@
+
+
+
+publish: index.html
 
 .PHONY: default publish
