@@ -180,7 +180,7 @@ Today:
 
 
 
-# Types of documents and such
+# Number and types of documents
 
 Types of documents:
 *Requerimento* (Petition),
