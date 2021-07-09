@@ -76,7 +76,7 @@ Demival Vasques Filho .small[Leibniz Institute of European History]
 
 .tiny[Source: Wikipedia]
 
-Territories that were once part of Portuguese Empire.
+Territories that were once part of Portuguese Empire (PE).
 
 ---
 
@@ -90,18 +90,12 @@ Territories that were once part of Portuguese Empire.
 Two theories/approaches:
 
 - **Metropole-periphery dependence** `r Citep(bib, c("prado_colonial_1967", "novais_portugal_1995"))`
-    - PE as a hierarchical system of political and economic dependencies between the Crown and the colonies
+    - PE as a system of political and economic dependencies between the Crown and the colonies
+    - Marxian perspective
 
 - **Multi-continental monarchy** `r Citep(bib, c("fragoso_monarquia_2009", "fragoso_um_2017"))`
     - PE as a complex interplay of political, economic, administrative, and social **networks**.
     - Local elites vis a vis the Crown
-
-Questions:
-
-- Who are the key actors?
-- What are the relevant types of relationships?
-- How these networks look like?
-- How these networks over the years?
 
 
 ???
@@ -112,32 +106,42 @@ Questions:
 
 
 
-# Overarching research problem
 
-> The structure of the political/economic/administrative/social networks...
-> 
-> - reflect
-> - predate
-> 
-> important events and macro-level processes such as
-> 
-> - colonies becoming more and more independent politically/economically from the Crown
 
-To this end
+# Questions
 
-- Reconstruct networks of administrative correspondence using data on 170'000 documents exchanged in the period 1610 - 1833 deposited at Historical Overseas Archives of Lisbon
+- Who are the key actors?
+- What are the relevant types of relationships?
+- How these networks look like?
+- How these networks change over the years?
 
+Do the network changes reflect or predate important social/political/economical events or processes?
+
+E.g.:
+
+- Colonies becoming more and more independent politically/economically from the Crown
 
 ---
 
 
 
-# Goals
+
+
+
+# Intermediate goals
+
+.large[
+Reconstruct networks of administrative correspondence using data on **170'000** documents exchanged in the period **1610-1833** deposited at Historical Overseas Archives of Lisbon.
+]
+
+Today:
 
 - Report how we used modern tools of Natural Language Processing to extract structured data from otherwise unstructured free text
 - Present preliminary descriptive analysis of the created data
 
 ---
+
+
 
 
 # The originals
@@ -147,8 +151,13 @@ To this end
 ![](o1.jpg)
 ![](o2.jpg)
 
+???
+
+- Stored in books
 
 ---
+
+
 
 
 
@@ -159,7 +168,10 @@ To this end
 
 ???
 
-Screenshot from a PDF
+- Prepared by archivist cataloging the documents
+- In Portuguese
+- Contain:
+    - 
 
 ---
 
@@ -170,7 +182,20 @@ Screenshot from a PDF
 
 # Types of documents and such
 
-> Figures showing types of documents and frequencies
+Types of documents:
+*Requerimento* (Petition),
+*Ofício* (Circular),
+*Carta* (Letter),
+*Consulta* (Enquiry),
+*Aviso* (Notice)
+
+.pull-left[
+![](records_per_year_1642-1822.png)
+]
+
+.pull-right[
+![](top5_types_evolution.png)
+]
 
 ---
 
@@ -180,40 +205,178 @@ Screenshot from a PDF
 
 ![pipeline](methods_diagramv2.png)
 
+???
+
+- Using Spacy. Using regex for other metadata.
+
+
+
 ---
 
 
 
-# NER model training
 
-![prodigy and spacy](prodigy.png)
+# Data processing
+
+**NER model training**
+
+- Random sample of **4230** (2.5%) documents
+    - Annotate entities (8 categories) manually
+- Train the model on 80% of documents, test on 20%
+    - Accuracy: **93.1%**
+- Apply the trained NER model to the remainder
+
+**Identifying senders and recipients**
+
+- Using Regular Expressions
+  
+As a result:
+
+- ~**9000 recipients**
+- ~**44000 senders**
+- ~**1500** actors who are **both senders and recipients**
 
 ???
 
-Using Spacy. Using regex for other metadata.
+What was the accuracy of the
+
+- Original Spacy model: advertised 89% on modern Portuguese, 80% on our corpus
+- Original model trained with our data:
+- Model trained from scratch
 
 ---
 
-# JSON
 
-> Show the JSON
+
+
+
+
+# Preparing training data
+
+![prodigy and spacy](prodigy.png)
+
+.small[
+Using Prodigy (https://prodi.gy/)
+]
+
+???
+
+Annotating:
+
+- Persons
+    - Men and women separately
+- Organization names (institutions and such)
+- Location names (cities, military forts)
+- Titles
+- Occupations
 
 ---
 
 
-# Network figures
 
-> John V, Joseph I, and perhaps other from Drive
+
+
+
+
+
+# JSON with free text and metadata
+
+.small[
+```
+{
+  "text": "1732, Setembro, 24, Ilha do Príncipe REQUERIMENTO de D. Francisca
+    Josefa de Sousa, moradora na ilha do Príncipe, viúva do antigo governador de
+    São Tomé, José Pinheiro da Câmara, ao rei D. João V solicitando ordens para
+    que o provedor da Fazenda Real e capitão-mor da ilha do Príncipe, António
+    Mendes, não a impedisse de vender os seus frutos, tal como vendiam os
+    moradores, porque era uma mulher nobre que vivia com dificuldades porque o
+    dito capitão-mor a odiava depois de Sua Majestade o ter impedido de executar
+    um precatório passado pelo provedor da Fazenda Real de São Tomé, Manuel de
+    Crasto e Macedo, em consequência de José de Crasto Rosa dizer que o defunto
+    lhe devia dinheiro de uma sociedade que tinham",
+  "sender": {"aff": [], "title": [], "names": ["D. Francisca Josefa de Sousa"], "occ": []},
+  "recipient": {"aff": [], "title": [], "names": ["D. João V"], "occ": ["rei"]},
+  "doc-type": "REQUERIMENTO",
+  "doc-id": 293952,
+  "date": "1732-09-24"
+}
+```
+]
+
+---
+
+
+
+
+
+# Networks
+
+.pull-left[
+![](prodigy_network_John_V.png)
+]
+
+.pull-right[
+![](prodigy_network_Joseph_I.png)
+]
+
+
+???
+
+- Note the emergence of "hubs" corresponding to other PE officials
+    - secreatary of the Overseas Council
+    - secretary of state
+    - governors
+    - judges
+
 
 ---
 
 
 # Degree distributions
 
+.pull-left[
+![](degree-johnv.png)
+]
+
+.pull-right[
+![](degree-josephi.png)
+]
+
+???
+
+Complementary cumulative frequency for degrees and weighted degrees of the correspondence networks during the reign of seven Portuguese monarchs
+
+The degree distributions corroborate the idea that 
+
+- citizens from the colonies could reach the monarch directly, given the extremely heavy-tailed indegree distributions. 
+
+It is interesting to note a change in these in-degree distributions from John V to Joseph I.
+
+- During the reign of Joseph I, more governmental officials (especially secretaries and governors)
+appear as important recipients of the administrative correspondence exchange between the
+colonies and the metropole.
+
 ---
 
 
-# LCCs
+# More descriptives
+
+| Monarch | Size | Size of LCC | Average degree | Density |
+|:---:|:---:|:---:|:---:|:---:|
+| John IV (1640- 1656)   | 301    | 265 (88%)    | 2.06 | 0.0068 | 
+| Afonso VI (1656- 1683) | 593    | 552 (93%)    | 2.26 | 0.0034 | 
+| Peter II (1683- 1706)  | 611    | 542 (89%)    | 2.14 | 0.0035 | 
+| John V (1706- 1750)    | 8279   | 8150 (98%)   | 2.36 | 0.0003 | 
+| Joseph I (1750- 1777)  | 7869   | 7734 (98%)   | 2.57 | 0.0003 | 
+| Maria I (1777- 1816)   | 18,506 | 18,341 (99%) | 2.55 | 0.0001 | 
+| John VI (1816- 1826)   | 2781   | 2728 (98%)   | 2.31 | 0.0008 | 
+
+???
+
+LCC, average degree and density are calculated considering both in- and out-edges. 
+
+- The average degree remains remarkably stable
+- The size of the LCC shows that the networks were very well connected albeit sparse.
 
 ---
 
