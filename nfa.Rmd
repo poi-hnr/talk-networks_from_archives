@@ -313,10 +313,12 @@ Annotating:
 
 .pull-left[
 ![](prodigy_network_John_V.png)
+.small[John V (1706- 1750)]
 ]
 
 .pull-right[
 ![](prodigy_network_Joseph_I.png)
+.small[Joseph I (1750- 1777)]
 ]
 
 
