@@ -155,7 +155,11 @@ To this end
 
 # The catalogue
 
-> Screenshot from a PDF
+![catalogue](catalog.png)
+
+???
+
+Screenshot from a PDF
 
 ---
 
@@ -174,7 +178,7 @@ To this end
 
 # The pipeline
 
-> Figure with the schema from the paper
+![pipeline](methods_diagramv2.png)
 
 ---
 
@@ -182,7 +186,11 @@ To this end
 
 # NER model training
 
-> Using Spacy. Using regex for other metadata.
+![prodigy and spacy](prodigy.png)
+
+???
+
+Using Spacy. Using regex for other metadata.
 
 ---
 
