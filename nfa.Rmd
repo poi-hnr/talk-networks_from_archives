@@ -387,16 +387,24 @@ LCC, average degree and density are calculated considering both in- and out-edge
 
 # Outlook
 
+Data-wise:
+
 1. Data cleaning
+    - Deduplication
+    - Dictionaries of persons, organizations and locations
 2. Data enrichment
+    - Birth/death dates
+    - Missing
 3. Publish
+    - Data will be publicly released
+    - Monitor https://mape.netlify.app
 
 ---
 
 
 # References
 
-.tiny[
+.small[
 ```{r references, echo=FALSE, results="asis"}
 PrintBibliography(bib)
 ```
