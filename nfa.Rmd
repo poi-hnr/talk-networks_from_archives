@@ -395,8 +395,10 @@ Data-wise:
     - Deduplication
     - Dictionaries of persons, organizations and locations
 2. Data enrichment
-    - Birth/death dates
-    - Missing
+    - Person birth/death dates
+    - Topic modeling of the documents (typology of relations)
+    - Missing attributes
+    - Persons mentioned in the documents who are neither senders nor recipients
 3. Publish
     - Data will be publicly released
     - Monitor https://mape.netlify.app
