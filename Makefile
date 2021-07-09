@@ -10,7 +10,7 @@ default: $(rmd:.Rmd=.html)
 %.html: %.Rmd
 	$(rscript) $(rscript_flags) -e 'rmarkdown::render("$<")'
 
-nfa.html: photo-demi.png photo-agata.png photo-michal.png logo-ieg.png logo-ku.png logo-ih.png $(wildcard css/*.css)
+nfa.html: photo-demi.png photo-agata.png photo-michal.png logo-ieg.png logo-ku.png logo-ih.png o1.jpg o2.jpg $(wildcard css/*.css)
 
 index.html: nfa.html
 	cp $< $@
@@ -33,6 +33,14 @@ photo-agata.png: photo-agata-src.jpg
 photo-michal.png: photo-michal-src.png
 	$(convert) --resize 100x $< $@
 
-publish:index.html
+o1.jpg: original-letter1.jpg
+	Rscript convert.R --resize x450 $< $@
+
+o2.jpg: original-letter2.jpg
+	Rscript convert.R --resize x450 $< $@
+
+
+
+publish: index.html
 
 .PHONY: default publish
